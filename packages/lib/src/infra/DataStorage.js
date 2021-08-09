@@ -44,6 +44,7 @@ class DataStorage {
     this._onChange = bounce.time(this._onChange.bind(this));
 
     objUtil.bridge(this, new Emitter());
+    this.props = this._makeProps(defaultData);
 
     this.restore().then(() => {
       this.props = this._makeProps(defaultData);
