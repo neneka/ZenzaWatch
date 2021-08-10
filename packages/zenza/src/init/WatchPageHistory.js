@@ -1,6 +1,7 @@
 import {nicoUtil} from '../../../lib/src/nico/nicoUtil';
 import {PRODUCT} from '../../../../src/ZenzaWatchIndex';
 const NicoVideoApi = {};
+import * as _ from 'lodash';
 
 //===BEGIN===
 /**
