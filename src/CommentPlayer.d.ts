@@ -10,11 +10,16 @@ export class NicoCommentPlayer {
         },
         showComment: boolean,
         debug: boolean,
-        playbackRate: number,
+        playbackRate?: number,
+        commentOpacity?: number,
     })
     _view: NicoCommentCss3PlayerView
 
     appendTo(node: Node)
     setComment(data: string, options: {format: "json"})
+    addChat(text: string, cmd: string, vpos?: number, options?: any)
     currentTime: number
+    playbackRate: number
+    vpos: number
+    setAspectRatio: (ratio: number) => void
 }
