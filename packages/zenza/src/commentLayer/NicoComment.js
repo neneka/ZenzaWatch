@@ -233,7 +233,7 @@ class NicoComment extends Emitter {
       nicoChat.text = this._wordReplacer(nicoChat.text);
     }
 
-    if (!this.nicoScripter.isEmpty) {
+    if (this.nicoScripter && !this.nicoScripter.isEmpty) {
       window.console.time('ニコスクリプト適用');
       this.nicoScripter.apply([nicoChat]);
       window.console.timeEnd('ニコスクリプト適用');
